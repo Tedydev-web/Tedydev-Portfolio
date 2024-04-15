@@ -8,6 +8,7 @@ import { FaFacebook, FaTelegram } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { AiOutlineMail } from "react-icons/ai";
+import WowInitializer from "../../helper/WowInitializer";
 
 function HeroSection() {
   return (
@@ -212,6 +213,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
+      <WowInitializer />
     </section>
   );
 }
