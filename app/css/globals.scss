@@ -8,6 +8,21 @@
   --color-text: #3c3e41;
   --box-shadow: 5px 5px 15px #c1c8d3, -5px -5px 15px #ffffff;
   --gradient-bg: linear-gradient(-45deg, #d000f7, #24bae3);
+    --body-color: #fcf2e8;
+    --background-gradient: linear-gradient(90deg, rgba(252, 242, 232, 1) 31%, rgba(252, 242, 232, 0) 99%);
+    --main-color: #fbda68;
+    --text-yellow-color: #fbda68;
+    --text-black-color-bold: #121212;
+    --black-color: #121212;
+    --white-color: white;
+    --text-black-color-normal: #2b2b2b;
+    ;
+    --background-yellow-color: #fbda68;
+    --border-gray-color: #666666;
+    --border-black-color: black;
+    --text-black-dont-chance: black;
+    --zalo-chat-color: #0162F2
+    /* --background-yellow-blod:#ffc107; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -174,3 +189,161 @@ img.logo {
 //   margin-bottom: 7rem;
 //   padding-bottom: 10rem;
 // }
+
+/* zalo */
+
+@keyframes zoom {
+    0% {
+        transform: scale(.5);
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+        transform: scale(1)
+    }
+}
+
+@keyframes lucidgenzalo {
+    0% {
+        transform: rotate(-25deg)
+    }
+    50% {
+        transform: rotate(25deg)
+    }
+}
+
+.jscroll-to-top {
+    bottom: 100px
+}
+
+.fcta-zalo-ben-trong-nut svg path {
+    margin-bottom: 1rem;
+    fill: #fff
+}
+
+.fcta-zalo-vi-tri-nut {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    z-index: 999
+}
+
+.fcta-zalo-nen-nut,
+div.fcta-zalo-mess {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16)
+}
+
+.fcta-zalo-nen-nut {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background: var(--zalo-chat-color);
+    border-radius: 50%;
+    position: relative
+}
+
+.fcta-zalo-nen-nut::after,
+.fcta-zalo-nen-nut::before {
+    content: "";
+    position: absolute;
+    border: 1px solid var(--zalo-chat-color);
+    background: var(--zalo-chat-color);
+    z-index: -1;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: zoom 1.9s linear infinite
+}
+
+.fcta-zalo-nen-nut::after {
+    animation-delay: .4s
+}
+
+.fcta-zalo-ben-trong-nut,
+.fcta-zalo-ben-trong-nut i {
+    transition: all 1s
+}
+
+.fcta-zalo-ben-trong-nut {
+    // position: relative;
+    transform: translate(35%, 35%);
+    text-align: center;
+    width: 60%;
+    height: 60%;
+    left: 10px;
+    bottom: 30px;
+    line-height: 70px;
+    font-size: 25px;
+    opacity: 1
+}
+
+.fcta-zalo-ben-trong-nut i {
+    animation: lucidgenzalo 1s linear infinite
+}
+
+.fcta-zalo-nen-nut:hover .fcta-zalo-ben-trong-nut,
+.fcta-zalo-text {
+    opacity: 0
+}
+
+.fcta-zalo-nen-nut:hover i {
+    transform: scale(.5);
+    transition: all .5s ease-in
+}
+
+.fcta-zalo-text a {
+    text-decoration: none;
+    color: #fff
+}
+
+.fcta-zalo-text {
+    position: absolute;
+    top: 6px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    transform: scaleX(-1);
+    transition: all .5s;
+    line-height: 1.5
+}
+
+.fcta-zalo-nen-nut:hover .fcta-zalo-text {
+    transform: scaleX(1);
+    opacity: 1
+}
+
+div.fcta-zalo-mess {
+    position: fixed;
+    bottom: 29px;
+    right: 58px;
+    z-index: 99;
+    background: linear-gradient(to right, #7c3aed, #ec4899);
+    padding: 7px 25px 7px 15px;
+    color: var(--zalo-chat-color);
+    border-radius: 50px 0 0 50px;
+    font-weight: 700;
+    font-size: 15px
+}
+
+.fcta-zalo-mess span {
+    color: #ffffff;
+}
+
+span#fcta-zalo-tracking {
+    font-family: '__Inter_aaf875', '__Inter_Fallback_aaf875';
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.fcta-zalo-text {
+    font-family: '__Inter_aaf875', '__Inter_Fallback_aaf875';
+}
+
+
+/* end zalo */
