@@ -21,7 +21,7 @@
     --border-gray-color: #666666;
     --border-black-color: black;
     --text-black-dont-chance: black;
-    --zalo-chat-color: radial-gradient(circle, #0061ff, #60efff);
+    --zalo-chat-color: #0162F2;
     /* --background-yellow-blod:#ffc107; */
         --body-color: #fcf2e8;
     --background-gradient: linear-gradient(90deg, rgba(252, 242, 232, 1) 31%, rgba(252, 242, 232, 0) 99%);
@@ -256,7 +256,7 @@ div.fcta-zalo-mess {
     height: 50px;
     text-align: center;
     color: #fff;
-    background-image: radial-gradient(circle, #60efff #0061ff);
+    background: var(--zalo-chat-color) important;
     border-radius: 50%;
     position: relative
 }

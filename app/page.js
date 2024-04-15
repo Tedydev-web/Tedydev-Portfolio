@@ -8,6 +8,7 @@ import Experience from "./components/homepage/experience";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
+import { Analytics } from "@vercel/analytics/react";
 
 async function getData() {
   const res = await fetch(
