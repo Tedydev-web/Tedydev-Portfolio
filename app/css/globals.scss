@@ -21,6 +21,21 @@
     --border-gray-color: #666666;
     --border-black-color: black;
     --text-black-dont-chance: black;
+    --zalo-chat-color: radial-gradient(circle, #0061ff, #60efff);
+    /* --background-yellow-blod:#ffc107; */
+        --body-color: #fcf2e8;
+    --background-gradient: linear-gradient(90deg, rgba(252, 242, 232, 1) 31%, rgba(252, 242, 232, 0) 99%);
+    --main-color: #fbda68;
+    --text-yellow-color: #fbda68;
+    --text-black-color-bold: #121212;
+    --black-color: #121212;
+    --white-color: white;
+    --text-black-color-normal: #2b2b2b;
+    ;
+    --background-yellow-color: #fbda68;
+    --border-gray-color: #666666;
+    --border-black-color: black;
+    --text-black-dont-chance: black;
     --zalo-chat-color: #0162F2
     /* --background-yellow-blod:#ffc107; */
 }
@@ -241,7 +256,7 @@ div.fcta-zalo-mess {
     height: 50px;
     text-align: center;
     color: #fff;
-    background: var(--zalo-chat-color);
+    background-image: radial-gradient(circle, #60efff #0061ff);
     border-radius: 50%;
     position: relative
 }
@@ -324,6 +339,7 @@ div.fcta-zalo-mess {
     right: 58px;
     z-index: 99;
     background: linear-gradient(to right, #7c3aed, #ec4899);
+    // background-color: #ffffff;
     padding: 7px 25px 7px 15px;
     color: var(--zalo-chat-color);
     border-radius: 50px 0 0 50px;
@@ -363,49 +379,83 @@ body::-webkit-scrollbar-track {
 }
 
 .box1.loading {
-    animation-duration: 1.5s;
-    animation-delay: 1.5s;
-    position: fixed;
-    left: 0;
-    height: 100vh;
-    width: 34%;
-    background-color: var(--main-color);
-    border-right: 2rem solid black;
-    box-shadow: rgb(0 0 0 / 97%) 0px 1px 20px, rgb(0 0 0 / 23%) 50px 60px 60px;
-    text-align: center;
-    font-size: 40rem;
-    font-weight: 600;
-    z-index: 10003;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 25vw;
+background-image: linear-gradient(to top, #ec4899, #7c3aed);
+  border-right: 2vw solid black;
+  box-shadow: rgb(0 0 0 / 97%) 0px 1px 20px, rgb(0 0 0 / 23%) 5vw 6vw 6vw;
+  text-align: center;
+  font-size: calc(10vw + 10vh);
+  font-weight: 600;
+  z-index: 10004;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box2.loading {
-    animation-duration: 1.5s;
-    animation-delay: 1s;
-    position: fixed;
-    left: 32%;
-    height: 100vh;
-    width: 34%;
-    background-color: var(--main-color);
-    border-right: 2rem solid black;
-    box-shadow: rgb(0 0 0 / 97%) 0px 1px 20px, rgb(0 0 0 / 23%) 50px 60px 60px;
-    text-align: center;
-    font-size: 40rem;
-    font-weight: 600;
-    z-index: 10002;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  position: fixed;
+  left: 25vw;
+    top: 0;
+  height: 100vh;
+  width: 25vw;
+background-image: linear-gradient(to top, #ec4899, #7c3aed);
+  border-right: 2vw solid black;
+  box-shadow: rgb(0 0 0 / 97%) 0px 1px 20px, rgb(0 0 0 / 23%) 5vw 6vw 6vw;
+  text-align: center;
+  font-size: calc(10vw + 10vh);
+  font-weight: 600;
+  z-index: 10003;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box3.loading {
-    animation-duration: 2s;
-    animation-delay: 0s;
-    position: fixed;
-    left: 66%;
-    height: 100vh;
-    width: 34%;
-    background-color: var(--main-color);
-    border-right: 2rem solid black;
-    box-shadow: rgb(0 0 0 / 97%) 0px 1px 20px, rgb(0 0 0 / 23%) 50px 60px 60px;
-    text-align: center;
-    font-size: 40rem;
-    font-weight: 600;
-    z-index: 10001;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  position: fixed;
+  left: 50vw;
+    top: 0;
+  height: 100vh;
+  width: 25vw;
+background-image: linear-gradient(to top, #ec4899, #7c3aed);
+  border-right: 2vw solid black;
+  box-shadow: rgb(0 0 0 / 97%) 0px 1px 20px, rgb(0 0 0 / 23%) 5vw 6vw 6vw;
+  text-align: center;
+  font-size: calc(10vw + 10vh);
+  font-weight: 600;
+  z-index: 10002;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.box4.loading {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  position: fixed;
+  left: 75vw;
+    top: 0;
+  height: 100vh;
+  width: 25vw;
+background-image: linear-gradient(to top, #ec4899, #7c3aed);
+  border-right: 2vw solid black;
+  box-shadow: rgb(0 0 0 / 97%) 0px 1px 20px, rgb(0 0 0 / 23%) 5vw 6vw 6vw;
+  text-align: center;
+  font-size: calc(10vw + 10vh);
+  font-weight: 600;
+  z-index: 10000;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
