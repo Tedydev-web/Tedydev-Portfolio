@@ -12,10 +12,10 @@ export const personalData = {
   facebook: "https://www.facebook.com/profile.php?id=100065890170990",
   instagram: "https://www.instagram.com/hieuda_t/",
   telegram: "https://t.me/tedydev",
- linkedIn: "https://www.linkedin.com/in/hieudat-tedydev",
+  linkedIn: "https://www.linkedin.com/in/hieudat-tedydev",
   stackOverflow: "https://stackoverflow.com/users/23295148/tedydev",
   gmail: "hieudat2310.bh@gmail.com",
   devUsername: "Tedydev",
   resume:
-    "https://qph6-my.sharepoint.com/:b:/g/personal/hieudat_qph6_onmicrosoft_com/EbR_JATp5xxBgZE0Qqoa0RsBQShuhajrDUoD5neJdL8noA?e=m5O2EN",
+    "https://qph6-my.sharepoint.com/:b:/g/personal/hieudat_qph6_onmicrosoft_com/EVFHmn9qz61PjP7fW1KyLN8BViGqToRB6HII6FAG-ve6zA?e=NGFrdO",
 };
