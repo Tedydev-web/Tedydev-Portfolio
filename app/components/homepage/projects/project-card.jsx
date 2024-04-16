@@ -26,11 +26,7 @@ function ProjectCard({ project }) {
       </div>
       <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
         <code className="font-mono text-xs md:text-sm lg:text-base">
-          <Link
-            href={demo}
-            target="_blank"
-            className="absolute top-15 right-5 flex justify-center items-center w-10 h-10 rounded-full border-2 border-[#EFF3F4] text-[#EFF3F4] transition-all duration-300 hover:bg-[#231d4b] hover:text-violet-600 hover:border-[#0F0C41] hover:scale-110 cursor-pointer no-underline delay-[0.3s] group-hover:translate-x-[380px]"
-          >
+          <Link href={demo} target="_blank" className="buttonPlay">
             <FaPlay />
           </Link>
           <div className="blink">
@@ -48,7 +44,7 @@ function ProjectCard({ project }) {
                 alt={name}
                 width={1080}
                 height={720}
-                className="w-80 h-64 transition-opacity duration-[0.7s] delay-[0.3s] rounded-lg group-hover:opacity-0"
+                className="w-90 h-75 transition-opacity duration-[0.7s] delay-[0.3s] rounded-lg group-hover:opacity-0"
               />
             </div>
             <span className="tex-gray-400">{`',`}</span>

@@ -459,3 +459,73 @@ background-image: linear-gradient(to top, #ec4899, #7c3aed);
 }
 
 
+.buttonPlay {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #EFF3F4;
+  color: #EFF3F4;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none; // Loại bỏ gạch chân mặc định cho phần tử
+  &:hover {
+    background-color: #231d4b;
+    color: #ff00ff; // Màu violet bạn có thể thay đổi
+    border-color: #0F0C41;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 45px rgba(19, 190, 196, 0.5);
+  }
+  &:focus {
+    outline: none; // Loại bỏ border focus mặc định
+  }
+  .group-hover & {
+    transform: translateX(380px); // Áp dụng cho trường hợp group-hover
+  }
+  animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
+}
+
+@keyframes pulse {
+  100% {
+    box-shadow: 0 0 0 45px rgba(193,244,246,0);
+  }
+}
+
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

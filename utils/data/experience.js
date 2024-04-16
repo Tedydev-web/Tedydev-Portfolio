@@ -17,4 +17,10 @@ export const experiences = [
     company: "Code and build something in everyday.",
     duration: "(Jan 2021 - Present)",
   },
+  {
+    id: 4,
+    title: "Condecanyone",
+    company: "Code and build something in everyday.",
+    duration: "(Jan 2021 - Present)",
+  },
 ];
