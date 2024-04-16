@@ -21,14 +21,24 @@ function AboutSection() {
             {personalData.description}
           </p>
         </div>
-        <div className="flex justify-center order-1 lg:order-2">
-          <Image
-            src={personalData.profile}
-            width={280}
-            height={280}
-            alt="Abu Said"
-            className="rounded-lg transition-all duration-1000 hover:scale-110 cursor-pointer"
-          />
+        <div className="avt-container">
+          <div class="light-button">
+            <button class="bt">
+              <div class="light-holder">
+                <div class="dot"></div>
+                <div class="light"></div>
+              </div>
+            </button>
+          </div>
+          <div className="flex justify-center order-1 lg:order-2">
+            <Image
+              src={personalData.profile}
+              width={280}
+              height={280}
+              alt="Tedy Dev"
+              className="avt"
+            />
+          </div>
         </div>
       </div>
     </div>

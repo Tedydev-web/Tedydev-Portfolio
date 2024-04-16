@@ -1,13 +1,16 @@
-import hotel from "/public/image/hotel.jpg";
-import eduvision from "/public/image/eduvision.jpg";
-import urms from "/public/image/urms.jpg";
-import bdmpro from "/public/image/bdmpro.jpg";
+import hotel from "/public/lottie/hotel.json";
+import urms from "/public/lottie/urms.json";
+import bdmpro from "/public/lottie/bdmpro.json";
+import eduvision from "/public/lottie/edu.json";
+
+
 
 export const projectsData = [
   {
     id: 1,
     name: "Online Examination System Project - EduVision",
     description: `This web application streamlines management for educational institutions of all sizes, including private centers and schools. Technical Highlights: Built with ASP.NET Core MVC for a robust and scalable architecture; Beautiful, intuitive interface with multi-language support (more than 3 languages); Optimized for various devices, ensuring a smooth user experience.`,
+    frameworks: ["ASP.NET Core MVC (.NET 6)"],
     tags: ["ASP.NET Core MVC (.NET 6)"],
     tools: [
       "C#",
@@ -22,7 +25,8 @@ export const projectsData = [
     role: "Full Stack Developer",
     code: "",
     demo: "https://eduvision.id.vn/",
-    image: eduvision,
+    // image: eduvision,
+    animation: eduvision,
   },
   {
     id: 2,
@@ -45,6 +49,7 @@ export const projectsData = [
     code: "",
     demo: "https://eduvision.id.vn/",
     image: bdmpro,
+    animation: bdmpro,
   },
   {
     id: 3,
@@ -62,15 +67,13 @@ export const projectsData = [
       "Entity Framework Core",
       "ASP.NET Core MVC",
       "ASP.NET MVC",
-      "Bootstrap 5",
-      "Charts.js",
-      "bootstrap-datepicker.js",
-      "choices.js",
+      "Bootstrap",
     ],
     code: "",
     role: "Full Stack Developer",
     demo: "https://eduvision.id.vn/",
-    image: urms,
+    // image: urms,
+    animation: urms,
   },
   {
     id: 4,
@@ -82,6 +85,7 @@ export const projectsData = [
     code: "",
     demo: "https://eduvision.id.vn/",
     image: hotel,
+    animation: hotel,
     role: "Full Stack Developer",
   },
 ];

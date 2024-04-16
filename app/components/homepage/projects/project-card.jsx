@@ -1,13 +1,22 @@
 // @flow strict
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { FaCode, FaPlay } from "react-icons/fa";
-import placeholder from "/public/png/placeholder.png";
+import { FaPlay } from "react-icons/fa";
+import AnimationLottie from "../../helper/animation-lottie";
 
 function ProjectCard({ project }) {
-  const { name, description, code, tags, demo, image, features } = project;
+  const {
+    name,
+    description,
+    code,
+    tags,
+    demo,
+    image,
+    features,
+    animate,
+    frameworks,
+  } = project;
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
       <div className="flex flex-row">
@@ -24,7 +33,7 @@ function ProjectCard({ project }) {
           {project.name}
         </p>
       </div>
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8 min-h-[700px]">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <Link href={demo} target="_blank" className="buttonPlay">
             <FaPlay />
@@ -38,14 +47,11 @@ function ProjectCard({ project }) {
           <div>
             <span className="ml-4 lg:ml-8 mr-2 text-white">image:</span>
             <span className="text-gray-400">{`'`}</span>
-            <div className="flex justify-center">
-              <Image
-                src={image ? image?.src : placeholder}
-                alt={name}
-                width={1080}
-                height={720}
-                className="w-90 h-75 transition-opacity duration-[0.7s] delay-[0.3s] rounded-lg group-hover:opacity-0"
-              />
+            <div
+              id="animate"
+              className="flex justify-center items-center w-60 h-50"
+            >
+              <AnimationLottie animationPath={project.animation} />
             </div>
             <span className="tex-gray-400">{`',`}</span>
           </div>

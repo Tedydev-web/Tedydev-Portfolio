@@ -3,11 +3,13 @@ import { personalData } from "@/utils/data/personal-data";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
-import { FaFacebook, FaStackOverflow } from "react-icons/fa";
+import { FaFacebook, FaStackOverflow, FaTelegram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import ContactForm from "./contact-form";
+import { BsLinkedin } from "react-icons/bs";
 
 function ContactSection() {
   return (
@@ -45,36 +47,21 @@ function ContactSection() {
               <span>{personalData.address}</span>
             </p>
           </div>
-          <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
-            <Link target="_blank" href={personalData.github}>
-              <IoLogoGithub
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
+          <div className="card">
+            <Link target="_blank" href={personalData.facebook}>
+              <FaFacebook className="social-link1" size={48} />
             </Link>
-            <Link target="_blank" href={personalData.instagram}>
-              <BiLogoLinkedin
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
+            <Link target="_blank" href={personalData.github}>
+              <IoLogoGithub className="social-link2" size={48} />
             </Link>
             <Link target="_blank" href={personalData.telegram}>
-              <FaXTwitter
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
+              <FaTelegram className="social-link3" size={48} />
             </Link>
-            <Link target="_blank" href={personalData.stackOverflow}>
-              <FaStackOverflow
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
+            <Link target="_blank" href={personalData.instagram}>
+              <FaInstagram className="social-link4" size={48} />
             </Link>
-            <Link target="_blank" href={personalData.facebook}>
-              <FaFacebook
-                className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
-                size={48}
-              />
+            <Link target="_blank" href={personalData.linkedIn}>
+              <BsLinkedin className="social-link5" size={48} />
             </Link>
           </div>
         </div>

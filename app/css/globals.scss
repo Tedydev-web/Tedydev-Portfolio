@@ -256,7 +256,7 @@ div.fcta-zalo-mess {
     height: 50px;
     text-align: center;
     color: #fff;
-    background: var(--zalo-chat-color) important;
+    background: var(--zalo-chat-color);
     border-radius: 50%;
     position: relative
 }
@@ -461,13 +461,13 @@ background-image: linear-gradient(to top, #ec4899, #7c3aed);
 
 .buttonPlay {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 2px solid #EFF3F4;
   color: #EFF3F4;
@@ -497,35 +497,227 @@ background-image: linear-gradient(to top, #ec4899, #7c3aed);
 }
 
 
-.top-right {
+#animate{
+  justify-content: center;
+  right: 50%;
+}
+
+.avt {
+border-radius: 0.5rem;
+  transition: all 1s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.avt-container {
+  display: flex;
+  justify-content: center;
+  order: 1;
+  align-items: flex-start; /* Căn giữa theo chiều dọc */
+  margin-top: 10px;
+}
+
+
+.light-button button.bt {
   position: absolute;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   top: 0;
-  right: 0;
+  margin-bottom: 30px;
 }
 
-.top-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.relative {
+.light-button button.bt .button-holder {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
+  width: 100%;
+  // background-color: #0a0a0a;
+  border-radius: 5px;
+  color: #0f0f0f;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 20;
+}
+
+.light-button button.bt .button-holder .avt {
+  height: 50px;
+  fill: #0f0f0f;
+  transition: 300ms;
+}
+
+.light-button button.bt .light-holder {
+  position: absolute;
+  height: 250px;
+  // width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 800px;
+}
+
+
+.light-button button.bt .light-holder .dot {
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+  position: absolute;
+  width: 40vw;
+  height: 450px;
+  clip-path: polygon(50% 0%, 500% 100%, -400% 100%);
+  background: transparent;
+}
+
+.light-button button.bt:hover .button-holder .avt {
+  fill: rgba(88, 101, 242, 1);
+}
+
+.light-button button.bt:hover .button-holder {
+  color: rgba(88, 101, 242, 1);
+  outline: rgba(88, 101, 242, 1) 2px solid;
+  outline-offset: 2px;
+}
+
+.light-button button.bt:hover .light-holder .light {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+  @media (max-width: 1024px) {
+    .avt-container {
+      order: 2;
+    }
+
+      .light-button button.bt .light-holder {
+  right: 65px;
+    position: absolute;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .light-button button.bt .light-holder .light {
+    position: absolute;
+    width: 100vw;
+    height: 700px;
+    clip-path: polygon(50% 0%, 1000% 100%, -1000% 100%);
+    background: transparent;
+  }
+  }
+
+.card {
+    margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+    background: #0d1430;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    border: 2px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    margin-top: 4rem;
+    gap: 2rem;
+  }
+}
+
+.card a {
+  width: 60%;
+  height: 100%;
+  font-size: 40px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  padding: 0.2rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.card .social-link1,.card .social-link2,.card .social-link3,.card .social-link4,.card .social-link5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 25%;
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.card a {
+  transform: scale(1);
+}
+
+.card .social-link1:hover {
+  background-color: #316FF6;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link2:hover {
+  background-color: #242c34;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link3:hover {
+  background-color: #0088cc;
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link4:hover{
+background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  animation: bounce_613 0.4s linear;
+}
+
+.card .social-link5:hover {
+  background-color: #0a66c2;
+  animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
