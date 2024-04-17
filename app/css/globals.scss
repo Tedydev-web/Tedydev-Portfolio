@@ -460,9 +460,6 @@ background-image: linear-gradient(to top, #ec4899, #7c3aed);
 
 
 .buttonPlay {
-  position: absolute;
-  top: 10px;
-  right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -474,27 +471,56 @@ background-image: linear-gradient(to top, #ec4899, #7c3aed);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   text-decoration: none; // Loại bỏ gạch chân mặc định cho phần tử
-  &:hover {
+ &:hover {
     background-color: #231d4b;
-    color: #ff00ff; // Màu violet bạn có thể thay đổi
-    border-color: #0F0C41;
+    color: violet;
+    border-color: #0f0c41;
     transform: scale(1.1);
-    box-shadow: 0 0 0 45px rgba(19, 190, 196, 0.5);
+}
   }
-  &:focus {
-    outline: none; // Loại bỏ border focus mặc định
-  }
-  .group-hover & {
-    transform: translateX(380px); // Áp dụng cho trường hợp group-hover
-  }
-  animation: 1.2s cubic-bezier(0.8, 0, 0, 1) 0s infinite normal none running pulse;
+
+
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px #C543B6, 0 0 10px #C543B6, 0 0 15px #C543B6, 0 0 20px #C543B6; }
+  50% { box-shadow: 0 0 10px #C543B6, 0 0 20px #C543B6, 0 0 30px #C543B6, 0 0 40px #C543B6; }
+  100% { box-shadow: 0 0 5px #C543B6, 0 0 10px #C543B6, 0 0 15px #C543B6, 0 0 20px #C543B6; }
 }
 
+.group:hover .buttonPlay {
+  position: relative;
+  animation: glowing 2s infinite;
+}
+
+.group:hover .buttonPlay::before,
+.group:hover .buttonPlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+}
+
+.group:hover .buttonPlay::before {
+  filter: blur(5px);
+  z-index: -1;
+}
+
+.group:hover .buttonPlay::after {
+  filter: blur(10px);
+  z-index: -2;
+}
 @keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(193, 244, 246, 0.7); /* Bắt đầu từ một box-shadow nhỏ */
+  }
   100% {
-    box-shadow: 0 0 0 45px rgba(193,244,246,0);
+    box-shadow: 0 0 0 45px rgba(55, 196, 201, 0); /* Kết thúc ở một box-shadow lớn */
   }
 }
+
 
 
 #animate{
@@ -579,7 +605,7 @@ border-radius: 0.5rem;
 
 .light-button button.bt .light-holder .light {
   position: absolute;
-  width: 40vw;
+  width: 50vw;
   height: 450px;
   clip-path: polygon(50% 0%, 500% 100%, -400% 100%);
   background: transparent;
@@ -628,11 +654,12 @@ border-radius: 0.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-    background: #0d1430;
+    background: #1A1443;
     align-items: center;
     justify-content: space-between;
     border-radius: 40px;
     border: 2px solid transparent;
+    padding: 5px;
     transition: all 0.5s ease-in-out;
 }
 
@@ -720,4 +747,13 @@ background: #f09433;
   100% {
     transform: scale(1);
   }
+}
+
+#group-hover{
+  right: 0;
+  top: 220px;
+}
+
+#footer-card{
+  width: 78vw;
 }
