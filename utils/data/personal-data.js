@@ -16,5 +16,5 @@ export const personalData = {
   gmail: "hieudat2310.bh@gmail.com",
   devUsername: "Tedydev",
   resume:
-    "https://qph6-my.sharepoint.com/personal/hieudat_qph6_onmicrosoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fhieudat%5Fqph6%5Fonmicrosoft%5Fcom%2FDocuments%2FWorkplace%2FDev%2FResume%2FResume%20of%20Tedy%20Dev%20%28Full%2DStack%20developer%29%2Epdf&parent=%2Fpersonal%2Fhieudat%5Fqph6%5Fonmicrosoft%5Fcom%2FDocuments%2FWorkplace%2FDev%2FResume&ga=1",
+    "https://drive.google.com/file/d/1ql77-VPxvHSxeoCbfoXKD3_4rT33-FUT/view?usp=sharing",
 };
