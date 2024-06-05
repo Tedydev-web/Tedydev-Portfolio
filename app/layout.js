@@ -21,17 +21,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                document.getElementById("linkzalo").href = "https://zalo.me/0869685621";
-              }
-            `,
-          }}
-        />
-      </Head>
       <body className={inter.className}>
         <ToastContainer />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
@@ -65,6 +54,15 @@ export default function RootLayout({ children }) {
               </div>
             </div>
           </a>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+              document.getElementById("linkzalo").href = "https://zalo.me/0869685621";
+            }
+          `,
+            }}
+          />
           {/* End Chat Zalo */}
         </main>
         <Footer />
