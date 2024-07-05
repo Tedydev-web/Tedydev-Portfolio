@@ -14,7 +14,7 @@ function Footer() {
 					className='flex flex-col md:flex-row items-center justify-between'
 					id='footer-card'
 				>
-					<p className='text-md'>
+					<p className='text-sm'>
 						© Developer Portfolio by{' '}
 						<Link
 							target='_blank'

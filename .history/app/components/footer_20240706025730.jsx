@@ -14,7 +14,7 @@ function Footer() {
 					className='flex flex-col md:flex-row items-center justify-between'
 					id='footer-card'
 				>
-					<p className='text-md'>
+					<p className='text-sm'>
 						© Developer Portfolio by{' '}
 						<Link
 							target='_blank'
@@ -24,7 +24,7 @@ function Footer() {
 							Tedy Dev
 						</Link>
 					</p>
-					{/* <div className='flex items-center gap-5 mt-[0 5px] ml-auto mr-auto'>
+					<div className='flex items-center gap-5 mt-[0 15px]'>
 						<Link
 							target='_blank'
 							href='https://github.com/Tedydev-web/Tedydev-Portfolio'
@@ -41,7 +41,7 @@ function Footer() {
 							<CgGitFork />
 							<span>Fork</span>
 						</Link>
-					</div> */}
+					</div>
 				</div>
 			</div>
 		</div>

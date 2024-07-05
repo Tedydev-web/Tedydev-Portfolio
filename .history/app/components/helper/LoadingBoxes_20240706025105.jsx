@@ -9,7 +9,7 @@ const LoadingBoxes = () => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setIsVisible(false);
-		}, 1400); // 3s for animation + 1s delay
+		}, 1800); // 3s for animation + 1s delay
 
 		return () => clearTimeout(timer);
 	}, []);

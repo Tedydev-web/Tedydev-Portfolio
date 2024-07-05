@@ -1,5 +1,7 @@
+'use client';
+import { useState, useEffect } from 'react';
 import { personalData } from '@/utils/data/personal-data';
-import AboutSection from './components/homepage/about';
+import AboutSection from './components/homepage/about'; // Ensure this path is correct
 import LoadingBoxes from './components/helper/LoadingBoxes';
 import Blog from './components/homepage/blog';
 import ContactSection from './components/homepage/contact';
@@ -9,6 +11,7 @@ import HeroSection from './components/homepage/hero-section';
 import Projects from './components/homepage/projects';
 import Skills from './components/homepage/skills';
 import { Analytics } from '@vercel/analytics/react';
+import 'animate.css';
 
 async function getData() {
 	const res = await fetch(
@@ -28,12 +31,22 @@ async function getData() {
 	return filtered;
 }
 
-export default async function Home() {
-	const blogs = await getData();
+export default function Home() {
+	const [loading, setLoading] = useState(true);
+	const [blogs, setBlogs] = useState([]);
+
+	useEffect(() => {
+		getData().then((data) => {
+			setBlogs(data);
+			setLoading(false);
+		});
+	}, []);
 
 	return (
 		<>
-			<LoadingBoxes />
+			{loading && (
+				<LoadingBoxes className='animate__animated animate__slideOutLeft' />
+			)}
 			<HeroSection />
 			<AboutSection />
 			<Experience />

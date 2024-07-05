@@ -2,10 +2,10 @@ export const personalData = {
 	name: 'TEDY DEV',
 	profile: '/profile.jpg',
 	designation: 'Developer',
-	description: `Hello! I'm Tedy Dev, a passionate web developer with a love for all things .NET.\n
-I thrive on creating smooth, efficient, and highly interactive web experiences.\n
-I enjoy tackling complex challenges and turning ideas into reality through clean and elegant code.\n
-As a fast learner who stays up-to-date with the latest trends, I'm confident in using my knowledge and experience to build robust and reliable web applications.\n
+	description: `Hi! I'm Tedy Dev, a passionate web developer with a love for all things .NET. 
+I thrive on creating smooth, efficient, and highly interactive web experiences. 
+I enjoy tackling complex challenges and turning ideas into reality through clean and elegant code. 
+As a fast learner who stays up-to-date with the latest trends, I'm confident in using my knowledge and experience to build robust and reliable web applications. 
 If you're looking for a dedicated, energetic .NET developer who's ready to dive into your project, let's connect!`,
 	email: 'hieudat2310.bh@gmail.com',
 	phone: '(+84) 0869685621',

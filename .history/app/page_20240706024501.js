@@ -1,3 +1,5 @@
+'use client';
+import { useState, useEffect } from 'react';
 import { personalData } from '@/utils/data/personal-data';
 import AboutSection from './components/homepage/about';
 import LoadingBoxes from './components/helper/LoadingBoxes';
@@ -28,20 +30,29 @@ async function getData() {
 	return filtered;
 }
 
-export default async function Home() {
-	const blogs = await getData();
+export default function Home() {
+	const [loading, setLoading] = useState(true);
+	const [blogs, setBlogs] = useState([]);
+
+	useEffect(() => {
+			getData().then((data) => {
+					setBlogs(data);
+					setLoading(false);
+			});
+	}, []);
 
 	return (
 		<>
-			<LoadingBoxes />
-			<HeroSection />
-			<AboutSection />
-			<Experience />
-			<Skills />
-			<Projects />
-			<Education />
-			<Blog blogs={blogs} />
-			<ContactSection />
+
+					{loading && <LoadingBoxes />}
+					<HeroSection />
+					<AboutSection />
+					<Experience />
+					<Skills />
+					<Projects />
+					<Education />
+					<Blog blogs={blogs} />
+					<ContactSection />
 		</>
 	);
 }

@@ -2,7 +2,7 @@ export const personalData = {
 	name: 'TEDY DEV',
 	profile: '/profile.jpg',
 	designation: 'Developer',
-	description: `Hello! I'm Tedy Dev, a passionate web developer with a love for all things .NET.\n
+	description: `Hi! I'm Tedy Dev, a passionate web developer with a love for all things .NET.\n
 I thrive on creating smooth, efficient, and highly interactive web experiences.\n
 I enjoy tackling complex challenges and turning ideas into reality through clean and elegant code.\n
 As a fast learner who stays up-to-date with the latest trends, I'm confident in using my knowledge and experience to build robust and reliable web applications.\n
