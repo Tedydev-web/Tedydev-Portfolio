@@ -21,12 +21,43 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>TedyDev | Hieu Dat - Portfolio Web Developer</title>
+        <meta
+          name="description"
+          content="TedyDev - Professional portfolio. Web Developer providing web and application development solutions."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://tedydev.id.vn" />
+        <meta property="og:title" content="TedyDev - Hieu Dat Portfolio" />
+        <meta
+          property="og:description"
+          content="View the portfolio of Hieu Dat, Web Developer. Professional web development projects and solutions."
+        />
+        <meta
+          property="og:image"
+          content="https://tedydev.id.vn/public/image/banner.png"
+        />
+        <meta property="og:url" content="https://tedydev.id.vn" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TedyDev - Hieu Dat Portfolio" />
+        <meta
+          name="twitter:description"
+          content="View the portfolio of Hieu Dat, Web Developer. Professional web development projects and solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://tedydev.id.vn/public/image/banner.png"
+        />
+      </head>
       <body className={inter.className}>
         <ToastContainer />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />
           {children}
-          {/* Chat Zalo */}
+          {/* Zalo Chat */}
           <a
             href="https://chat.zalo.me/?phone=0869685621"
             id="linkzalo"
@@ -50,7 +81,7 @@ export default function RootLayout({ children }) {
                     ></path>
                   </svg>
                 </div>
-                <div className="fcta-zalo-text">Chat ngay</div>
+                <div className="fcta-zalo-text">Chat now</div>
               </div>
             </div>
           </a>
@@ -63,7 +94,7 @@ export default function RootLayout({ children }) {
           `,
             }}
           />
-          {/* End Chat Zalo */}
+          {/* End Zalo Chat */}
         </main>
         <Footer />
       </body>
